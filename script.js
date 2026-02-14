@@ -1,3 +1,5 @@
+const URL = "https://randomlegendary.github.io/C.H.A.T./"
+
 const inputBox = document.getElementById('message')
 const submitBtn = document.getElementById('submit')
 const divMessages = document.getElementById('messages')
@@ -5,7 +7,7 @@ const divMessages = document.getElementById('messages')
 submitBtn.addEventListener('click', async function(e) {
     e.preventDefault()
 
-    fetch("/messages", {
+    fetch( `${URL}/messages`, {
         method: "POST",
         headers: {
             "Content-Type": "text/plain"
@@ -25,7 +27,7 @@ window.addEventListener('load', function() {
 })
 
 async function requestMessages() {
-    const result = await fetch("/messages")
+    const result = await fetch(`${URL}/messages`)
     const data = await result.json()
 
     divMessages.innerHTML = ''
@@ -44,6 +46,6 @@ async function requestMessages() {
 
 
 const clearBtn = document.getElementById('clear').addEventListener('click', async function clearMessages() {
-        await fetch("/clearList")
+        await fetch(`${URL}/clearList`)
         requestMessages()
 })
