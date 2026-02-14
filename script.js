@@ -1,4 +1,4 @@
-const URL = "https://randomlegendary.github.io/C.H.A.T."
+const URL = "https://chat2-oie2.onrender.com"
 
 const inputBox = document.getElementById('message')
 const submitBtn = document.getElementById('submit')
