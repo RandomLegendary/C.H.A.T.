@@ -5,7 +5,6 @@ const divMessages = document.getElementById('messages')
 submitBtn.addEventListener('click', async function(e) {
     e.preventDefault()
 
-    
     fetch("/messages", {
         method: "POST",
         headers: {
