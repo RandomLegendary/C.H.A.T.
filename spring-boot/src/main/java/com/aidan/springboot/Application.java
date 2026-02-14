@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-@CrossOrigin(origins = "http://localhost:5500")
+@CrossOrigin(origins = "https://chat2-oie2.onrender.com")
 @SpringBootApplication
 @RestController
 public class Application {
