@@ -14,6 +14,11 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+
+        String port = System.getenv("PORT");
+        if (port == null || port.isEmpty()) {
+            port = "8080"; // default for local dev
+        }
     }
 
     List<String> messages = new ArrayList<>();
