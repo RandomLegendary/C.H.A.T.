@@ -1,4 +1,4 @@
-const URL = "https://randomlegendary.github.io/C.H.A.T./"
+const URL = "https://randomlegendary.github.io/C.H.A.T."
 
 const inputBox = document.getElementById('message')
 const submitBtn = document.getElementById('submit')
