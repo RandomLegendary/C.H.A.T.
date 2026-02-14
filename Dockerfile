@@ -1,8 +1,4 @@
-FROM openjdk:17
-
+FROM openjdk:17-jdk
 WORKDIR /app
-COPY . .
-
-RUN javac Application.java
-
+COPY . /app
 CMD ["java", "Application"]
