@@ -6,7 +6,7 @@ submitBtn.addEventListener('click', async function(e) {
     e.preventDefault()
 
     
-    fetch("http://localhost:8080/messages", {
+    fetch("/messages", {
         method: "POST",
         headers: {
             "Content-Type": "text/plain"
@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
 })
 
 async function requestMessages() {
-    const result = await fetch("http://localhost:8080/messages")
+    const result = await fetch("/messages")
     const data = await result.json()
 
     divMessages.innerHTML = ''
@@ -45,6 +45,6 @@ async function requestMessages() {
 
 
 const clearBtn = document.getElementById('clear').addEventListener('click', async function clearMessages() {
-        await fetch("http://localhost:8080/clearList")
+        await fetch("/clearList")
         requestMessages()
 })
